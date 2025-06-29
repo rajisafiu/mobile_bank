@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="header">
+      <h2>Dashboard</h2>
+      <div>
+        🔔 ⚙
+      </div>
+    </div>
+
+    <div class="balance-card">
+      <h3>Current Balance</h3>
+      <div class="amount" id="balance">$2847.32</div>
+      <div>📈 +2.4% from last month</div>
+      <div class="balance-info">
+        <div>Available<br><strong>$1203.18</strong></div>
+        <div>Pending<br><strong>$1644.14</strong></div>
+      </div>
+    </div>
+
+    <div class="quick-actions">
+      <h2>Quick Actions</h2>
+      <button onclick="withdrawFunds()">⬇ Withdraw Funds</button>
+      <button onclick="addTransaction()">➕ Add Transaction</button>
+      <button onclick="addAirtimedata()">➕ Airtime & Data</button>
+    </div>
+
+    <div class="transaction-history">
+      <h4>Transaction History</h4>
+      <div style="margin-top: 0.5rem; font-size: 0.9rem;">ATM Withdrawal<br>
+        <small>REF: #TXN-1751097785181<br>Jun 28, 2025</small>
+      </div>
+      <div class="amount">$100.00</div>
+
+      <div style="margin-top: 0.5rem; font-size: 0.9rem;">ATM Withdrawal<br>
+        <small>REF: #TXN-1751097785181<br>Jun 28, 2025</small>
+      </div>
+      <div class="amount">$100.00</div>
+
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 1rem;
+    }
+
+    .dashboard {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .header h2 {
+      font-size: 1.5rem;
+    }
+
+    .balance-card {
+      background: linear-gradient(135deg, #2d8cf0, #1a73e8);
+      border-radius: 12px;
+      padding: 1.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .balance-card h3 {
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .balance-card .amount {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .balance-info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .quick-actions, .transaction-history {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .quick-actions button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #f1f1f1;
+      font-size: 1rem;
+    }
+
+    .transaction {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #eee;
+      padding: 1rem 0;
+    }
+
+    .transaction:first-child {
+      border-top: none;
+    }
+
+    .transaction .info {
+      font-size: 0.95rem;
+    }
+
+    .transaction .info small {
+      display: block;
+      color: #777;
+    }
+
+    .transaction .amount {
+      font-weight: bold;
+    }
