@@ -10,6 +10,9 @@
   <div class="dashboard">
     <div class="header">
       <h2>Dashboard</h2>
+        <div class="container">
+    <button class="mode-toggle" id="toggleMode">🌙 Dark Mode</button>
+  </div>
       <div>
         🔔 ⚙
       </div>
@@ -27,24 +30,55 @@
 
     <div class="quick-actions">
       <h2>Quick Actions</h2>
-      <button onclick="withdrawFunds()">⬇ Withdraw Funds</button>
-      <button onclick="addTransaction()">➕ Add Transaction</button>
-      <button onclick="addAirtimedata()">➕ Airtime & Data</button>
+      <button onclick="withdrawFunds()"><span style="background-color: green;">⬇</span> Withdraw Funds</button>
+      <button onclick="addTransaction()"><span style="background-color: green;">➕</span> Add Transaction</button>
+      <button onclick="addAirtimedata()"><span style="background-color: green;">➕</span> Airtime & Data</button>
     </div>
 
-    <div class="transaction-history">
-      <h4>Transaction History</h4>
-      <div style="margin-top: 0.5rem; font-size: 0.9rem;">ATM Withdrawal<br>
-        <small>REF: #TXN-1751097785181<br>Jun 28, 2025</small>
-      </div>
-      <div class="amount">$100.00</div>
+      <div class="section-title">Transaction History</div>
 
-      <div style="margin-top: 0.5rem; font-size: 0.9rem;">ATM Withdrawal<br>
-        <small>REF: #TXN-1751097785181<br>Jun 28, 2025</small>
-      </div>
-      <div class="amount">$100.00</div>
-
+    <div class="filters">
+      <select id="typeFilter">
+        <option>All Types</option>
+        <option>Deposit</option>
+        <option>Withdrawal</option>
+        <option>Airtime & Data</option>
+        <option>Electricity</option>
+        <option>Betting</option>
+      </select>
+      <select id="dateFilter">
+        <option>Last 30 days</option>
+        <option>Last 7 days</option>
+        <option>Last 90 days</option>
+        <option>Last six months</option>
+      </select>
     </div>
+
+    <div class="transaction">
+      <div>
+        <div class="transaction-info">
+          <div class="transaction-type">Direct Deposit</div>
+          <div class="transaction-ref">REF: #TXN-001</div>
+          <div class="transaction-date">Mar 15, 2024</div>
+        </div>
+      </div>
+      <div class="amount positive">+$2,500</div>
+    </div>
+
+    <div class="transaction">
+      <div>
+        <div class="transaction-info">
+          <div class="transaction-type">ATM Withdrawal</div>
+          <div class="transaction-ref">REF: #TXN-002</div>
+          <div class="transaction-date">Mar 14, 2024</div>
+        </div>
+      </div>
+      <div class="amount negative">-$200</div>
+    </div>
+  </div>
+
+
+    
   </div>
   <script src="./main.js"></script>
 </body>

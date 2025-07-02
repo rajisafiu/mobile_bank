@@ -52,7 +52,7 @@
       font-size: 0.95rem;
     }
 
-    .quick-actions, .transaction-history {
+    .quick-actions {
       background: #fff;
       border-radius: 12px;
       padding: 1rem;
@@ -70,27 +70,110 @@
       font-size: 1rem;
     }
 
-    .transaction {
+     .section-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin: 24px 0 12px;
+    }
+
+    .filters {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .filters select {
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 0.9rem;
+    }
+
+    .transaction {
+      background-color: #fff;
+      padding: 14px;
+      border-radius: 12px;
+      display: flex;
       align-items: center;
-      border-top: 1px solid #eee;
-      padding: 1rem 0;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
-    .transaction:first-child {
-      border-top: none;
+    .transaction-info {
+      display: flex;
+      flex-direction: column;
     }
 
-    .transaction .info {
-      font-size: 0.95rem;
-    }
-
-    .transaction .info small {
-      display: block;
-      color: #777;
-    }
-
-    .transaction .amount {
+    .transaction-type {
       font-weight: bold;
+    }
+
+    .transaction-ref {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .transaction-date {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .amount {
+      font-weight: bold;
+    }
+
+    .positive {
+      color: green;
+    }
+
+    .negative {
+      color: #e67e22;
+    }
+
+
+    /* light mode or Dark mode */
+
+        :root {
+      --bg-color-light: #ffffff;
+      --text-color-light: #111111;
+      --bg-color-dark: #1e1e1e;
+      --text-color-dark: #f0f0f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color-light);
+      color: var(--text-color-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-color-dark);
+      color: var(--text-color-dark);
+    }
+
+
+    .container {
+      max-width: 480px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .mode-toggle {
+      font-size: 24px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      color: #000;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode .mode-toggle {
+      background-color: #333;
+      color: #fff;
     }
